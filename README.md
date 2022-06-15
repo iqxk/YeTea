@@ -14,6 +14,7 @@
   <li>Wyświetlanie szczegółów zamówienia</li>
   <li>Prosty panel administracyjny pozwalający zmieniać statusy zamówień</li>
   <li>Media query</li>
+  <li>Baza danych MySQL phpMyAdmin</li>
 </ul>
 
 <hr />
