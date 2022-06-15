@@ -1,0 +1,34 @@
+.contact
+{
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.panel
+{
+    width: 100%;
+}
+
+.contact-title
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    padding: 10px;
+    background-color: #14d214;
+    border-radius: 20px 20px 0 0;
+}
+
+.content
+{
+    border-radius: 0 0 20px 20px;
+    padding: 10px;
+    background-color: #cde0ef;
+}
+
+@media only screen and (min-width: 1150px)
+{
+    .panel { width: 50%; margin: 0 auto 0; }
+}

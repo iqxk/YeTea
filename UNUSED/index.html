@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YeTea.pl</title>
+    <link rel="stylesheet" type="text/css" href="index-style.css">
+    <link rel="stylesheet" type="text/css" href="mobile-index-style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+
+<!-- MOBILE -->
+<div id="mobile">
+    <!-- MOBILE SIDENAV -->
+    <div id="mobile-sidenav">
+        <a href="javascript:void(0)" id="close-btn" onclick="closeSideNav()">&times;</a>
+        <a href="#">Herbata</a>
+        <a href="#">Kreator herbaty</a>
+        <a href="#">Prezenty</a>
+        <a href="#">FAQ</a>
+        <a href="#">Kontakt</a>
+    </div>
+    <!-- MOBILE TOP NAV -->
+    <div id="mobile-top-nav">
+        <a id="open-sidenav" class="material-icons" onclick="openSideNav()">menu</a> <!-- OPEN SIDENAV -->
+        <img class="mobile-logo" src="images/logo.png">                              <!-- MOBILE LOGO -->
+        <!-- MOBILE USER PANEL -->
+        <div id="user-panel-dropdown" class="dropdown">
+            <a onclick="toggleUserPanel()" class="dropdown-btn material-icons">person</a>
+            <div id="userPanelDropdown" class="dropdown-content">
+                <a href="#">Logowanie</a>
+                <a href="#">Rejestracja</a>
+            </div>
+        </div>
+        <!-- MOBILE CART -->
+        <div id="cart-dropdown" class="dropdown">
+            <a onclick="toggleCart()" class="dropdown-btn material-icons">shopping_cart</a>
+            <div id="cartDropdown" class="dropdown-content">
+                <div id="cart">
+                    <img class="cart-icon" src="images/cart.png">
+                    <p class="items-amount">Ilość produktów:</p>
+                    <p class="items-cost">Suma:</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- PC -->
+<div id="PC">
+    <div class="logo col-6"><img src="images/logo.png"></div> <!-- LOGO -->
+    <div class="func col-6">
+        <!-- USER PANEL -->
+        <div class="user-panel">
+            <div class="sign-btn" id="login">Logowanie</div>
+            <div class="sign-btn" id="register">Rejestracja</div>
+        </div>
+        <!-- CART -->
+        <div class="cart">
+            <img src="images/cart.png" class="cart-icon">
+            <p class="items-amount">Ilość produktów:</p>
+            <p class="items-cost">Suma:</p>
+        </div>
+    </div>
+    <!-- PC NAV -->
+    <div class="nav col-12">
+        <a class="btn active">Herbata</a>
+        <a class="btn">Kreator herbaty</a>
+        <a class="btn">Prezenty</a>
+        <a class="btn">FAQ</a>
+        <a class="btn">Kontakt</a>
+    </div>
+</div>
+
+<!-- NEWS -->
+<div class="news col-12">
+    <!-- SLIDESHOW PHOTOS-->
+    <div class="slideshow-container">
+        <div class="slideshow fade"><div class="first"></div></div>
+        <div class="slideshow fade"><div class="second"></div></div>
+        <div class="slideshow fade"><div class="third"></div></div>
+        <a class="prev-slide" onclick="moveSlide(-1)">&#10094;</a>
+        <a class="next-slide" onclick="moveSlide(1)">&#10095;</a>
+    </div>
+    <!-- SLIDESHOW DOTS -->
+    <div class="dots-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+</div>
+<!-- FILTER -->
+<div class="filter col-2">
+    <!-- SEARCHBAR -->
+    <div class="searchbar">
+        <input type="text" placeholder="Wyszukaj...">
+        <a class="search-submit" type="submit"><i class="material-icons">search</i></a>
+    </div>
+    <!-- PRICE RANGE -->
+    <br><hr><br>
+    <div class="price-range">
+        <p>Cena:</p>
+        <input type="number" placeholder="od"> - <input type="number" placeholder="do">
+    </div>
+    <br><hr><br>
+    <!-- TAGS -->
+    <div class="tags">
+        <label class="tag-container">Czarna
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+        <label class="tag-container">Biała
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+        <label class="tag-container">Zielona
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+        <label class="tag-container">Czerwona
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+        <label class="tag-container">Owocowa
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+    </div>
+    <br><hr><br>
+    <div class="tags">
+        <label class="tag-container">Promocja
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+        <label class="tag-container">Zestaw
+            <input type="checkbox">
+            <span class="checkmark"></span>
+        </label>
+    </div>
+    <br><br>
+    <div class="submit-container"><button type="submit" class="submit-btn">Zatwierdź</button></div>
+</div>
+<!-- SORT BY -->
+<div class="sort-by col-10">
+    <div class="sort-text">Sortuj według:</div>
+    <div class="sort-btn">Nazwa</div>
+    <div class="sort-btn active">Cena</div>
+    <div class="sort-btn">Popularność</div>
+    <div class="sort-order">
+        <div class="sort-order-btn material-icons">keyboard_arrow_up</div>
+        <div class="sort-order-btn material-icons active">keyboard_arrow_down</div>
+    </div>
+</div>
+<!-- PRODUCTS PANEL -->
+<div class="products col-10">
+    <div class="item">
+        <img class="tea-img" src="images/tea-temporary.jpg">
+        <p class="tea-name">Produkt nr. 1</p>
+        <p class="tea-desc">składnik a, składnik b, składnik c, składnik d, składnik e</p>
+        <p class="tea-price">XX,YY zł</p>
+        <a class="add-to-cart">Dodaj do koszyka</a>
+        <p class="amount-available">Ilość sztuk: X</p>
+    </div>
+    <div class="item">
+        <img class="tea-img" src="images/tea-temporary.jpg">
+        <p class="tea-name">Produkt nr. 2</p>
+        <p class="tea-desc">składnik a, składnik b, składnik c, składnik d, składnik e</p>
+        <p class="tea-price">XX,YY zł</p>
+        <a class="add-to-cart">Dodaj do koszyka</a>
+        <p class="amount-available">Ilość sztuk: X</p>
+    </div>
+    <div class="item">
+        <img class="tea-img" src="images/tea-temporary.jpg">
+        <p class="tea-name">Produkt nr. 3</p>
+        <p class="tea-desc">składnik a, składnik b, składnik c, składnik d, składnik e</p>
+        <p class="tea-price">XX,YY zł</p>
+        <a class="add-to-cart">Dodaj do koszyka</a>
+        <p class="amount-available">Ilość sztuk: X</p>
+    </div>
+    <div class="item">
+        <img class="tea-img" src="images/tea-temporary.jpg">
+        <p class="tea-name">Produkt nr. 4</p>
+        <p class="tea-desc">składnik a, składnik b, składnik c, składnik d, składnik e</p>
+        <p class="tea-price">XX,YY zł</p>
+        <a class="add-to-cart">Dodaj do koszyka</a>
+        <p class="amount-available">Ilość sztuk: X</p>
+    </div>
+    <div class="item">
+        <img class="tea-img" src="images/tea-temporary.jpg">
+        <p class="tea-name">Produkt nr. 5</p>
+        <p class="tea-desc">składnik a, składnik b, składnik c, składnik d, składnik e</p>
+        <p class="tea-price">XX,YY zł</p>
+        <a class="add-to-cart">Dodaj do koszyka</a>
+        <p class="amount-available">Ilość sztuk: X</p>
+    </div>
+    <div class="item">
+        <img class="tea-img" src="images/tea-temporary.jpg">
+        <p class="tea-name">Produkt nr. 6</p>
+        <p class="tea-desc">składnik a, składnik b, składnik c, składnik d, składnik e</p>
+        <p class="tea-price">XX,YY zł</p>
+        <a class="add-to-cart">Dodaj do koszyka</a>
+        <p class="amount-available">Ilość sztuk: X</p>
+    </div>
+    <div class="item">
+        <img class="tea-img" src="images/tea-temporary.jpg">
+        <p class="tea-name">Produkt nr. 7</p>
+        <p class="tea-desc">składnik a, składnik b, składnik c, składnik d, składnik e</p>
+        <p class="tea-price">XX,YY zł</p>
+        <a class="add-to-cart">Dodaj do koszyka</a>
+        <p class="amount-available">Ilość sztuk: X</p>
+    </div>
+    <div class="item">
+        <img class="tea-img" src="images/tea-temporary.jpg">
+        <p class="tea-name">Produkt nr. 8</p>
+        <p class="tea-desc">składnik a, składnik b, składnik c, składnik d, składnik e</p>
+        <p class="tea-price">XX,YY zł</p>
+        <a class="add-to-cart">Dodaj do koszyka</a>
+        <p class="amount-available">Ilość sztuk: X</p>
+    </div>
+    <div class="item">
+        <img class="tea-img" src="images/tea-temporary.jpg">
+        <p class="tea-name">Produkt nr. 9</p>
+        <p class="tea-desc">składnik a, składnik b, składnik c, składnik d, składnik e</p>
+        <p class="tea-price">XX,YY zł</p>
+        <a class="add-to-cart">Dodaj do koszyka</a>
+        <p class="amount-available">Ilość sztuk: X</p>
+    </div>
+    <div class="item">
+        <img class="tea-img" src="images/tea-temporary.jpg">
+        <p class="tea-name">Produkt nr. 10</p>
+        <p class="tea-desc">składnik a, składnik b, składnik c, składnik d, składnik e</p>
+        <p class="tea-price">XX,YY zł</p>
+        <a class="add-to-cart">Dodaj do koszyka</a>
+        <p class="amount-available">Ilość sztuk: X</p>
+    </div>
+    <div class="item">
+        <img class="tea-img" src="images/tea-temporary.jpg">
+        <p class="tea-name">Produkt nr. 11</p>
+        <p class="tea-desc">składnik a, składnik b, składnik c, składnik d, składnik e</p>
+        <p class="tea-price">XX,YY zł</p>
+        <a class="add-to-cart">Dodaj do koszyka</a>
+        <p class="amount-available">Ilość sztuk: X</p>
+    </div>
+    <div class="item">
+        <img class="tea-img" src="images/tea-temporary.jpg">
+        <p class="tea-name">Produkt nr. 12</p>
+        <p class="tea-desc">składnik a, składnik b, składnik c, składnik d, składnik e</p>
+        <p class="tea-price">XX,YY zł</p>
+        <a class="add-to-cart">Dodaj do koszyka</a>
+        <p class="amount-available">Ilość sztuk: X</p>
+    </div>
+</div>
+<!-- PAGE BAR -->
+<div class="page-bar col-10">
+    <div class="max-back"><<<</div>
+    <div class="back"><</div>
+    <div class="page">1</div>
+    <div class="page">2</div>
+    <div class="page">3</div>
+    <div class="next">></div>
+    <div class="max-next">>>></div>
+</div>
+<!-- FOOTER -->
+<div class="footer col-12">© 2020 - Igor Kucyk</div>
+</body>
+<script src="script.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+
+</html>

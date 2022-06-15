@@ -1,0 +1,168 @@
+.product-panel
+{
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.p-left, .p-right
+{
+
+}
+
+.p-right
+{
+    overflow: auto;
+}
+
+.p-tea-img
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 50%;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    top: 10px;
+}
+
+.p-tea-name
+{
+    font-size: 50px;
+    text-align: center;
+}
+
+.description
+{
+    width: 100%;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    border: 4px dotted #14d214;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.p-tea-category
+{
+    font-size: 20px;
+    text-align: center;
+    color: darkgrey;
+}
+
+.ingredients-list
+{
+    font-weight: bold;
+    text-align: center;
+}
+
+.ingredients-panel
+{
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 5px 10px 5px;
+    width: 100%;
+    list-style-position: inside;
+    list-style-type: disc;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.ingredients-panel li
+{
+    padding: 10px;
+}
+
+.price-amount-container
+{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.p-tea-price
+{
+    text-align: center;
+    font-size: 35px;
+}
+
+.p-tea-gram
+{
+    margin-left: 10px;
+    font-size: 16px;
+    color: darkgrey;
+}
+
+.cart-and-amount
+{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-content: baseline;
+    width: 100%;
+}
+
+.cart-and-amount span
+{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.amount
+{
+    text-align: center;
+    display: block;
+    margin: 5px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.amount:focus
+{
+    outline: none;
+}
+
+input[type=number]
+{
+    width: 4em;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+    height: 30px;
+    opacity: 1;
+}
+
+.add-to-cart
+{
+    width: 163px;
+}
+
+.p-amount-available
+{
+    text-align: center;
+    font-size: 16px;
+    color:darkgrey;
+}
+
+/* Not mobile */
+@media only screen and (min-width: 975px)
+{
+    .product-panel { grid-template-columns: 50% 50%; }
+    .ingredients-panel, .description
+    {
+        width: 50%;
+        margin: 0 auto 0;
+    }
+    .description { margin-top: 50px; }
+    .p-left
+    {
+        border-width: 0 1px 0 0;
+        border-style: solid;
+        border-color: black;
+    }
+    .cart-and-amount { width: 50%; }
+}

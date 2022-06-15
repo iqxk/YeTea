@@ -1,0 +1,45 @@
+.wrong
+{
+    display: block;
+    align-content: center;
+    margin-top: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.wrong-panel
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 20%;
+    margin: 0 auto 0;
+    justify-content: center;
+}
+
+.wrong-header
+{
+    font-size: 2em;
+    text-align: center;
+}
+
+.return
+{
+    border-radius: 15px;
+    background-color: #14d214;
+    font-family: Verdana;
+    font-size: 16px;
+    text-aling: center;
+    padding: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+    text-decoration: none;
+    color: black;
+    border: none;
+}
+
+.return:hover
+{
+    transform: translate(0,3px);
+}

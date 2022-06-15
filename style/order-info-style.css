@@ -1,0 +1,108 @@
+.order-panel
+{
+    border: 1px solid black;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.order-info
+{
+    display: block;
+    margin-top: 30px;
+    width: 100%;
+    border: 2px solid #14d214;
+    border-radius: 20px;
+    background-color: #cde0ef;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.order-info input, .order-info select
+{
+    outline: none;
+}
+
+.supplier-select, .name-lastname, .address, .city-postcode
+{
+    display: flex;
+    margin-bottom: 10px;
+    padding: 0 10px 0;
+}
+
+.order-header
+{
+    text-align: center;
+    font-weight: bold;
+    background-color: #14d214;
+    margin-bottom: 5px;
+    width: 100%;
+    padding: 10px;
+}
+
+.supplier-select
+{
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.supplier-select select
+{
+    padding: 5px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.name-lastname
+{
+    justify-content: space-between;
+}
+
+.name-lastname input
+{
+    width: 45%;
+    padding: 5px;
+}
+
+.address
+{
+
+}
+
+.address input
+{
+    padding: 5px;
+    width: 100%;
+}
+
+.city-postcode
+{
+    justify-content: space-between;
+}
+
+.city-postcode #city
+{
+    width: 80px;
+    padding: 5px;
+}
+
+.city-postcode span
+{
+    text-align: center;
+}
+
+.city-postcode #postcode-left
+{
+    width: 50px;
+    padding: 5px;
+}
+
+.city-postcode #postcode-right
+{
+    width: 60px;
+    padding: 5px;
+}
+
+@media only screen and (min-width: 601px)
+{
+    .order-info { width: 250px;}
+}
