@@ -19,7 +19,7 @@
 
 <hr />
 
-<h1>Zrzuty ekrany</h1>
+<h1>Zrzuty ekranu</h1>
 <p>---------- Strona główna ----------</p>
 <img src="https://user-images.githubusercontent.com/107581764/173931334-c8f68f02-7b58-4300-8880-df05cd3540cf.png" />
 <img src="https://user-images.githubusercontent.com/107581764/173931423-17d3a282-187a-432a-8998-9a9ddb4657e8.png" />
