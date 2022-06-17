@@ -3,7 +3,7 @@
 
 <hr />
 
-<h1>Funkcjonalność:</h1>
+<h1>Funkcjonalność</h1>
 <ul>
   <li>Wyświetlanie produktów</li>
   <li>Wyświetlanie szczegółów produktu z dynamicznie aktualizującą się ceną oraz gramaturą w zależności od ilości produktu</li>
